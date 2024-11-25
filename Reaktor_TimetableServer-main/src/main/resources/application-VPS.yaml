@@ -1,0 +1,24 @@
+spring:
+  jpa.hibernate.ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/reaktor_timetableserver
+    username: root
+    password: qP8u-Ab80S_
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+server:
+  port: 8088
+  ssl:
+    key-store: classpath:microservices-iesjandula.duckdns.org.p12
+    key-store-password: 1133557799
+    keyStoreType: PKCS12
+logging:
+    level:
+        root: DEBUG
+    file:
+        name: /tmp/reaktor_timeTableServer.log
+        max-size: 1MB
+        max-history: 10
+        total-size-cap: 10MB
+urlCors: https://sleepy-chebyshev.194-164-171-3.plesk.page/, http://localhost:5000, https://alvaroo611.github.io
